@@ -1,4 +1,6 @@
 function Dark()
-	vim.cmd("colorscheme catppuccin-macchiato") end
-	function Light()
-		vim.cmd("colorscheme catppuccin-latte") end
+	vim.cmd("colorscheme rose-pine-main")
+end
+function Light()
+	vim.cmd("colorscheme rose-pine-dawn")
+end
