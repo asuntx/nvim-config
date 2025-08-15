@@ -1,5 +1,11 @@
 return {
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	},
+	{ "rose-pine/neovim", name = "rose-pine", transparency = true },
 	{
 		{
 			"stevearc/oil.nvim",
