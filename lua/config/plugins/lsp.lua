@@ -23,7 +23,7 @@ return {
 			lspconfig.gopls.setup({})
 			lspconfig.ruff.setup({})
 			lspconfig.biome.setup({})
-
+			lspconfig.astro.setup({})
 			-- Use native Neovim LSP API for the "ty" server
 			vim.lsp.enable("ty")
 		end,
