@@ -1,5 +1,29 @@
 return {
 	{
+		"vimpostor/vim-tpipeline",
+		config = function()
+			-- optional tweaks
+			vim.g.tpipeline_cursormoved = 1 -- update on CursorMoved (more responsive)
+		end,
+	},
+
+	{
+		"gruvw/strudel.nvim",
+		cmd = "StrudelLaunch",
+		build = "npm install",
+		config = function()
+			require("strudel").setup({
+				launch = {
+					timeout = 30000,
+				},
+			})
+		end,
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
 		"windwp/nvim-autopairs",
 		config = function()
 			require("nvim-autopairs").setup({})

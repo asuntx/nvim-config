@@ -14,12 +14,18 @@ return {
 			},
 		},
 		config = function()
+			local lspconfig = require("lspconfig")
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			require("lspconfig").lua_ls.setup({ capabilities = capabilities })
-			require("lspconfig").ts_ls.setup({})
-			require("lspconfig").gopls.setup({})
-			require("lspconfig").ruff.setup({})
-			require("lspconfig").biome.setup({})
+
+			-- Standard servers configured with lspconfig
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.ts_ls.setup({})
+			lspconfig.gopls.setup({})
+			lspconfig.ruff.setup({})
+			lspconfig.biome.setup({})
+
+			-- Use native Neovim LSP API for the "ty" server
+			vim.lsp.enable("ty")
 		end,
 	},
 }
