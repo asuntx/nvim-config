@@ -20,6 +20,7 @@ return {
 			-- Standard servers configured with lspconfig
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.ts_ls.setup({})
+			lspconfig.tailwindcss.setup({})
 			lspconfig.gopls.setup({})
 			lspconfig.ruff.setup({})
 			lspconfig.biome.setup({})
