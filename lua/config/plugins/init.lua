@@ -1,6 +1,7 @@
 return {
 	{ "lewis6991/gitsigns.nvim" },
 	{ "numToStr/Comment.nvim" },
+	{ "rebelot/kanagawa.nvim" },
 	{
 		"vimpostor/vim-tpipeline",
 		config = function()
